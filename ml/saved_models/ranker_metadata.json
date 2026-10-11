@@ -1,0 +1,120 @@
+{
+  "model_name": "xgboost",
+  "feature_names": [
+    "skill_match_score",
+    "semantic_similarity_score",
+    "tfidf_score",
+    "experience_match_score",
+    "education_match_score",
+    "years_of_experience",
+    "num_skills",
+    "num_required_skills_matched",
+    "num_projects",
+    "has_certification",
+    "has_internship",
+    "cgpa"
+  ],
+  "dataset": "SYNTHETIC demo data \u2014 NOT real hiring data",
+  "n_samples": 2000,
+  "n_features": 12,
+  "train_size": 1200,
+  "val_size": 400,
+  "test_size": 400,
+  "test_metrics": {
+    "accuracy": 0.8475,
+    "precision": 0.8742,
+    "recall": 0.7722,
+    "f1": 0.8201,
+    "roc_auc": 0.9447,
+    "confusion_matrix": [
+      [
+        200,
+        20
+      ],
+      [
+        41,
+        139
+      ]
+    ]
+  },
+  "all_model_results": {
+    "xgboost": {
+      "accuracy": 0.8825,
+      "precision": 0.8889,
+      "recall": 0.8444,
+      "f1": 0.8661,
+      "roc_auc": 0.9501,
+      "confusion_matrix": [
+        [
+          201,
+          19
+        ],
+        [
+          28,
+          152
+        ]
+      ],
+      "cv_roc_auc_mean": 0.9459,
+      "cv_roc_auc_std": 0.0057,
+      "cv_f1_mean": 0.8403,
+      "cv_f1_std": 0.0116
+    },
+    "random_forest": {
+      "accuracy": 0.845,
+      "precision": 0.8315,
+      "recall": 0.8222,
+      "f1": 0.8268,
+      "roc_auc": 0.9446,
+      "confusion_matrix": [
+        [
+          190,
+          30
+        ],
+        [
+          32,
+          148
+        ]
+      ],
+      "cv_roc_auc_mean": 0.9489,
+      "cv_roc_auc_std": 0.0084,
+      "cv_f1_mean": 0.8505,
+      "cv_f1_std": 0.0102
+    },
+    "gradient_boosting": {
+      "accuracy": 0.875,
+      "precision": 0.8824,
+      "recall": 0.8333,
+      "f1": 0.8571,
+      "roc_auc": 0.9487,
+      "confusion_matrix": [
+        [
+          200,
+          20
+        ],
+        [
+          30,
+          150
+        ]
+      ],
+      "cv_roc_auc_mean": 0.9485,
+      "cv_roc_auc_std": 0.0077,
+      "cv_f1_mean": 0.8494,
+      "cv_f1_std": 0.0122
+    }
+  },
+  "feature_importances": {
+    "skill_match_score": 0.1419,
+    "semantic_similarity_score": 0.2775,
+    "tfidf_score": 0.2209,
+    "experience_match_score": 0.0424,
+    "education_match_score": 0.0327,
+    "years_of_experience": 0.0383,
+    "num_skills": 0.0281,
+    "num_required_skills_matched": 0.0472,
+    "num_projects": 0.0324,
+    "has_certification": 0.0569,
+    "has_internship": 0.0508,
+    "cgpa": 0.0308
+  },
+  "warning": "These metrics are from synthetic data only. Do not claim them as real-world hiring accuracy."
+}
